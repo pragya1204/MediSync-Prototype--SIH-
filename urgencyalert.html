@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <link href="css/urgencystyle.css" rel="stylesheet">
+    <link rel="icon" href="MediSync_processed.ico" type="image/x-icon">
+</head>
+<body onload="showUrgentPopup()">
+
+    <!-- The Modal for Urgent Confirmation -->
+    <div id="urgentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Urgent Appointment</h2>
+            </div>
+            <div class="modal-body">
+                <p style="font-weight: 600;">Do you want to mark this appointment as URGENT?</p>
+            </div>
+            <div class="modal-footer">
+                <button style="font-weight: 600;" class="btn" onclick="endCondition()">OK</button>
+                <button class="btn btn-cancel" onclick="closeModal('urgentModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Patient Condition Input -->
+    <div id="conditionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Patient Condition</h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="conditionInput" class="input-field" placeholder="Please describe the patient's condition...">
+                <p style="font-weight: 600;">
+                    **Important Notice: Urgency Terms**
+                    <br><br>
+                    By agreeing to mark this appointment as URGENT, you acknowledge that:
+                    <br><br>
+                    1. You are in a serious state of urgency and require immediate attention.
+                    <br>
+                    2. If you agree to this urgency status without a genuine need, it will result in a strike on your account.
+                    <br>
+                    3. Accumulating 3 strikes on your account will result in a penalty charge.
+                    <br><br>
+                    Please ensure that this urgent status is applied only when absolutely necessary.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="patientdetails.html" style="font-weight: 600;" class="btn" onclick="submitCondition()">Agree & Submit</a>
+                <button class="btn btn-cancel" onclick="closeModal('conditionModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+   
+      <script>
+        function showUrgentPopup() {
+            document.getElementById('urgentModal').style.display = 'block';
+        }
+
+        function endCondition() {
+            closeModal('urgentModal');
+            document.getElementById('conditionModal').style.display = 'block';
+        }
+
+        function submitCondition() {
+            const conditionInput = document.getElementById('conditionInput').value;
+            if (conditionInput) {
+                alert("Condition submitted: " + conditionInput);
+            } else {
+                alert("No condition was entered.");
+            }
+            closeModal('conditionModal');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+
+    
+
+</body>
+</html>
+
+
+

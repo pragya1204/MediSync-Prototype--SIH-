@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+
+}
+
+:root {
+    --main-color: #042494;
+    --second-color: #CBE6FF;
+    --third-color: #FFC002;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+
+}
+
+section {
+    padding: 150px 100px 0 100px;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+}
+
+.navbar {
+    display: flex;
+    background: none;
+
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+header h2 {
+    color: #fff;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.navbar-sign-in a {
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+
+
+.navbar-sign-in .sign-in {
+    background: var(--third-color);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.navbar-sign-in a:hover {
+    color: black;
+}
+
+.navbar-sign-in .sign-in:hover {
+    background: var(--second-color);
+}
+
+/* Watermark CSS */
+.watermark {
+    position: fixed;
+    top: 58%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
+    opacity: 0.2; /* Transparency for the watermark */
+    z-index: -1; /* Ensures it's above other content */
+    pointer-events: none; /* Prevent interaction with the watermark */
+}
+
+.watermark img {
+    width: 600px;  /* Increase the size of the watermark */
+    height: auto;
+}
+.overview {
+    text-align: center;
+    padding: 0 0 2rem 0;
+
+}
+
+.overview p {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.home-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5rem;
+}
+}
+
+.home-card div {
+    text-align: center;
+}
+
+.home-card div i {
+    font-size: 3rem;
+    padding: 3rem 8.75rem;
+}
+
+.home-card div img:hover {
+    font-size: 3.5rem;
+}
+
+
+.home-card .card-r {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 17%;
+    background: var(--second-color);
+    text-align: center;
+    border: 0.5px solid black;
+    box-shadow: 0.5px 0.5px 21px black;
+
+}
+
+.home-card .card-em {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 17%;
+    background: var(--second-color);
+    text-align: center;
+    border: 0.5px solid black;
+    box-shadow: 0.5px 0.5px 21px black;
+
+
+}
+
+.home-card .card-r:hover {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 17%;
+    background: var(--second-color);
+    box-shadow: 2px 2px 41px #042494;
+    text-decoration: underline;
+
+}
+
+.home-card .card-em:hover {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 17%;
+    background: var(--second-color);
+    box-shadow: 2px 2px 41px #9d0707;
+    text-decoration: underline;
+
+}
+
+.home-card .card-r a {
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.home-card .card-em a {
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    text-align: center;
+}
+
+.underline {
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: #042494 0.25rem solid;
+}
+
+.features p {
+    font-weight: 500;
+}
+
+.feature-cards {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature-cards .card {
+    width: 22rem;
+    height: 18rem;
+    box-shadow: 1px 1px 20px gray;
+    text-align: center;
+    border-radius: 10%;
+
+}
+
+.feature-cards .card .card-head {
+    background: var(--main-color);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+.feature-cards .card .card-head h3 {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.feature-cards .card p {
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* FAQs */
+.faqs {
+    text-align: center;
+}
+
+.flowchart img {
+    width: 600px;
+    height: 400px;
+    box-shadow: 1px 1px 24px grey;
+    border-radius: 15%;
+}
+
+.flowchart img:hover {
+    width: 630px;
+    height: 430px;
+}
+
+.faqs .question {
+    padding: 3rem 0 3rem 0;
+    text-align: left;
+}
+
+.faqs .question ul {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 0.5px solid black;
+}
+
+.faqs .question ul:hover {
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 21px black;
+}
+
+.feedback-section form a {
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.feedback h2 {
+    /* padding-bottom: 2rem; */
+    font-weight: 600;
+    text-align: center;
+}
+
+.feedback-section form input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.feedback-section form input:hover {
+    font-size: 1.3rem;
+    border: 0.5px solid black;
+}
+
+.feedback-section form div {
+    padding: 2rem 0 2rem 0;
+}
+
+.feedback-section form a:hover {
+    color: black;
+
+}
+
+.feedback-section form .btn {
+    background-color: var(--third-color);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.feedback-section form .btn:hover {
+    background: var(--second-color);
+}
+
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 3rem 5rem 3rem;
+
+}
+
+.contact-details div p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.footer {
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    bottom: 0;
+}
+
+.newsletter h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    background: none;
+
+}
+

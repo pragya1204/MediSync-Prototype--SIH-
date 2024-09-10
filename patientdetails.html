@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <link href="css/patientdetails.css" rel="stylesheet">
+    <link rel="icon" href="MediSync_processed.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="patientDetails">
+        <div id="loadingOverlay">
+            <div id="loadingSpinner"></div>
+        </div>
+        <h2>Patient Details</h2>
+        <p>Name: <span id="patientName"></span></p>
+        <p>Age: <span id="patientAge"></span></p>
+        <p>Patient ID: <span id="patientId"></span></p>
+        <p>Token Number: <span id="tokenNumber"></span></p>
+    </div>
+    <script src="Scripts/urgencymain.js"></script>
+    <script>
+        // Simulate loading state
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadingOverlay = document.getElementById("loadingOverlay");
+            
+            // Simulate content loading
+            setTimeout(() => {
+                loadingOverlay.style.display = "none"; // Hide the loading overlay
+                // Here you would typically load your content dynamically
+            }, 3000); // Simulate a 2-second loading delay
+        });
+    </script>
+</body>
+</html>

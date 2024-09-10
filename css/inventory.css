@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color: #042493;
+    --second-color: #CBE6FF;
+    --third-color: #FFC002;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+
+}
+
+section {
+    padding: 150px 100px 0 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin: 16px;
+}
+
+.navbar {
+    display: flex;
+    background: none;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+header h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.search {
+    height: 100px;
+    width: 80vw;
+    top: 110px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.searchlabel {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.search input {
+    width: 40%;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.search input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.grid-table {
+    display: grid;
+    position: relative;
+    top: 115px;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 2fr 1fr 1fr 1fr 2fr 2fr;
+    grid-gap: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.grid-item {
+    padding: 10px;
+    background-color: #faf5f596;
+}
+
+.grid-header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.mainbox {
+    display: flex;
+}
+.grid-item button{
+    padding: 3px;
+}
+.grid-item input{
+    padding: 5px;
+    width: 80%;
+}
+/* Watermark CSS */
+.watermark {
+    position: fixed;
+    top: 58%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
+    opacity: 0.2; /* Transparency for the watermark */
+    z-index: -1; /* Ensures it's above other content */
+    pointer-events: none; /* Prevent interaction with the watermark */
+}

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --main-color: #FF3F3F;
+    --second-color: #CBE6FF;
+    --third-color:#FFC002;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+
+}
+section {
+    padding: 150px 100px 0 100px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+h2{
+    margin: 16px;
+}
+.navbar{
+    display: flex;
+    background: none;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+
+header h2{
+    color: #fff;
+    font-weight: 600;
+}
+/* Watermark CSS */
+.watermark {
+    position: fixed;
+    top: 58%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
+    opacity: 0.2; /* Transparency for the watermark */
+    z-index: -1; /* Ensures it's above other content */
+    pointer-events: none; /* Prevent interaction with the watermark */
+}
+
+.watermark img {
+    width: 600px;  /* Increase the size of the watermark */
+    height: auto;
+}
+.location{
+    height: 100px;
+    width: 80vw;
+    top: 90px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.locationlabel{
+    margin: 20px;
+    font-size: 24px;
+}
+
+.dropbtn {
+    background-color: #FF3F3F;
+    color: white;
+    padding: 11px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.dropbtn:hover{
+    background-color: var(--third-color);
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown-content.show {
+    display: block;
+}
+.grid-table {
+    display: grid;
+    position: relative;
+    top: 105px;
+    left: 6%;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    width: 34%;
+    text-align: center;
+}
+
+.grid-item {
+    padding: 10px;
+    background-color: #faf5f596;
+}
+
+.grid-header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.mainbox{
+    display: flex;
+}
+iframe{
+    width: 58%;
+    height: 70vh;
+    top: 105px;
+    position: relative;
+    left: 4%;
+}

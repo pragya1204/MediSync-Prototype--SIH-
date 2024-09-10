@@ -1,0 +1,91 @@
+/* Patient details */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ 
+:root {
+    --main-color: #042494;
+    --second-color: #CBE6FF;
+    --third-color: #FFC002;
+}
+/* General Styles */
+body {
+    background-color: var(--second-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  
+  /* Patient Details Card */
+  #patientDetails {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    
+    border: 1px solid #ddd;
+    position: relative; /* Added for the overlay */
+  }
+  
+  /* Loading Overlay */
+  #loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1; /* Ensure it sits above the content */
+  }
+  
+  #loadingSpinner {
+    border: 8px solid rgba(0, 0, 0, 0.1); /* Light grey background */
+    border-left: 8px solid #007bff; /* Blue spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spinner Animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Heading Styles */
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph and Span Styles */
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Add some subtle hover effects */
+  #patientDetails:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  

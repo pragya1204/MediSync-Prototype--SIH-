@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+:root {
+    --main-color: #042494;
+    --second-color: #CBE6FF;
+    --third-color: #FFC002;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+
+}
+
+section {
+    padding: 150px 100px 0 100px;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+}
+
+.navbar {
+    display: flex;
+    background: none;
+
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+header h2 {
+    color: #fff;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.navbar-sign-in a {
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+
+
+.navbar-profile .profile {
+    background-color: #d3d3d3;
+    color: black;
+    border: 0.5px solid black;
+    box-shadow: 1px 1px 21px black;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+.navbar-profile .profile:hover{
+    font-size: 16px;
+}
+
+
+.header .profile {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Watermark CSS */
+.watermark {
+    position: fixed;
+    top: 58%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
+    opacity: 0.2; /* Transparency for the watermark */
+    z-index: -1; /* Ensures it's above other content */
+    pointer-events: none; /* Prevent interaction with the watermark */
+}
+
+.watermark img {
+    width: 600px;  /* Increase the size of the watermark */
+    height: auto;
+}
+.container {
+    padding: 7rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.submit-btn:hover{
+    background-color: var(--third-color);
+}
+
+.dropbtn {
+    background-color: #9cd2ff;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    width: 400px;
+    height: 65px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.cards {
+    background-color: #9cd2ff;
+    font-weight: 700;
+    width: 400px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 400px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+
+.dropdown-content input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #042494;
+    font-size: 16px;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown-content.show {
+    display: block;
+}
+
+.date-dropdown {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#timeDropdown {
+    background-color: white;
+}
+
+.appointment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    margin: 20px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.appointment-option {
+    display: flex;
+    align-items: center;
+}
+
+.appointment-option input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.appointment-option label {
+    cursor: pointer;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="css/style3.css" />
+    <link rel="icon" href="MediSync_processed.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="watermark">
+      <img src="MediSync Logo.png" alt="Watermark Logo" />
+    </div>
+    <header>
+      <div class="logo">
+        <img src="MediSync Logo.png" alt="" width="70px" height="70px" />
+        <h2>MediSync</h2>
+      </div>
+
+      <ul class="navbar">
+        <li><a href="landingpage.html#home">Home</a></li>
+        <li><a href="landingpage.html#faqs">FAQ</a></li>
+        <li><a href="landingpage.html#feedback">Feedback</a></li>
+        <li><a href="landingpage.html#contact">Contact</a></li>
+      </ul>
+      <div class="navbar-profile">
+        <a href="profile.html" class="profile">Profile</a>
+      </div>
+    </header>
+
+    <form action="your-backend-url" method="POST">
+      <div class="container">
+        <div class="dropdown">
+          <button type="button" class="dropbtn" onclick="toggleDropdown()">
+            Select Hospital
+          </button>
+          <div class="dropdown-content" id="dropdownContent">
+            <input
+              type="text"
+              placeholder="Search..."
+              id="searchInput"
+              onkeyup="filterFunction()"
+            />
+            <a href="#" onclick="selectHospital('New Delhi Railway Hospital')"
+              >New Delhi Railway Hospital</a
+            >
+            <a href="#" onclick="selectHospital('Yoga Hospital')"
+              >Yoga Hospital</a
+            >
+            <a href="#" onclick="selectHospital('General Williams Hospital')"
+              >General Williams Hospital</a
+            >
+            <a href="#" onclick="selectHospital('AIIMS')">AIIMS</a>
+            <a href="#" onclick="selectHospital('Apollo Hospital')"
+              >Apollo Hospital</a
+            >
+          </div>
+        </div>
+
+        <input type="hidden" name="selectedHospital" id="selectedHospital" />
+
+        <div class="cards date">
+          DATE
+          <div class="date-dropdown">
+            <select id="dayDropdown" name="day">
+              <option disabled selected>Day</option>
+            </select>
+            <select id="monthDropdown" name="month">
+              <option disabled selected>Month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select id="yearDropdown" name="year">
+              <option disabled selected>Year</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+        </div>
+
+        <select class="cards" id="timeDropdown" name="time">
+          <option disabled selected>Select Time</option>
+        </select>
+
+        <div class="appointment-options cards">
+          <div class="appointment-option">
+            <input
+              type="radio"
+              id="offline"
+              name="appointment"
+              value="offline"
+            />
+            <label for="offline">Offline Appointment</label>
+          </div>
+          <div class="appointment-option">
+            <input type="radio" id="online" name="appointment" value="online" />
+            <label for="online">Online Appointment</label>
+          </div>
+        </div>
+
+        <a href="urgencyalert.html" class="submit-btn"> Submit </a>
+      </div>
+    </form>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="Scripts/main3.js"></script>
+  </body>
+</html>

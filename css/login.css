@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+:root {
+    --main-color: #042494;
+    --second-color: #CBE6FF;
+    --third-color: #FFC002;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+
+}
+
+section {
+    padding: 150px 100px 0 100px;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+}
+
+.navbar {
+    display: flex;
+    background: none;
+
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+header h2 {
+    color: #fff;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+/* Watermark CSS */
+.watermark {
+    position: fixed;
+    top: 58%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
+    opacity: 0.2; /* Transparency for the watermark */
+    z-index: -1; /* Ensures it's above other content */
+    pointer-events: none; /* Prevent interaction with the watermark */
+}
+
+.watermark img {
+    width: 600px;  /* Increase the size of the watermark */
+    height: auto;
+}
+.login-container {
+    background-color: white;
+    width: 300px;
+    margin: 11rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-container h2 {
+    background-color: #7d8ff3;
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+.login-container .input-group {
+    
+    padding: 0 3rem  0 3rem;
+    margin: 20px 0;
+}
+.login-container .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.login-container .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-container .input-group-btn a{
+    text-decoration: none;
+    color: white;
+    
+}
+.login-container .input-group{
+    width: 100%;
+    padding: 10px;
+    background-color: #d3d3d3;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-container .input-group-btn{
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: var(--main-color);
+
+}
+.login-container .input-group-btn:hover{
+    background: var(--third-color);
+}
+#loginSelect{
+    font-size: 15px;
+    margin-left: 8px;
+    border-radius: 8px;
+    font-weight: 500;
+}

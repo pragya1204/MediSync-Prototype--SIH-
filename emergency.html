@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency - Look for beds nearby</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="icon" href="MediSync_processed.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="watermark">
+        <img src="MediSync Logo.png" alt="Watermark Logo">
+      </div>
+    <header>
+        <div class="logo">
+            <img src="MediSync Logo.png" alt="" width="70px" height="70px">
+            <h2>MediSync</h2>
+        </div>
+
+        <ul class="navbar">
+            <li><a href="landingpage.html#home">Home</a></li>
+            <li><a href="landingpage.html#faqs">FAQ</a></li>
+            <li><a href="landingpage.html#feedback">Feedback</a></li>
+            <li><a href="landingpage.html#contact">Contact</a></li>
+        </ul>
+        </div>
+    </header>
+    <div class="location">
+        <span class="locationlabel">LOCATION</span>
+        <div class="dropdown">
+            <button class="dropbtn" id="dropdownButton" onclick="toggleDropdown()">Select Location</button>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="#" onclick="selectOption('North Delhi')">North Delhi</a>
+                <a href="#" onclick="selectOption('South Delhi')">South Delhi</a>
+                <a href="#" onclick="selectOption('West Delhi')">West Delhi</a>
+                <a href="#" onclick="selectOption('East Delhi')">East Delhi</a>
+            </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <iframe
+            src="https://embed.mappls.com/nearby/mmi000?token=<TOKEN>&traffic=false&keyword=Hospitals&fullscreen=true&pitch=30&<MAPPLS_PIN>="
+            title="embed Example" allowfullscreen="">
+        </iframe>
+        <div class="grid-table">
+            <div class="grid-item grid-header">Hospital Names</div>
+            <div class="grid-item grid-header">ER Beds</div>
+            <div class="grid-item grid-header">Blood</div>
+            <div class="grid-item grid-header">Oxygen Cylinders</div>
+
+            <div class="grid-item">New Delhi Railway Hospital</div>
+            <div class="grid-item">56</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">Yoga Hospital</div>
+            <div class="grid-item">32</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">General Williams Hospital</div>
+            <div class="grid-item">28</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">10</div>
+
+        </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="Scripts/main1.js"></script>
+</body>
+
+</html>
