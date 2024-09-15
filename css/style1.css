@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,16 @@
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+
 }
+
 :root {
-    --main-color: #FF3F3F;
+    --main-color: linear-gradient(90deg, rgba(4, 56, 140, 0.95) 0%, rgba(4, 36, 148, 0.9) 100%);
     --second-color: #CBE6FF;
-    --third-color:#FFC002;
+    --third-color: #FFC002;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,33 +27,45 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--main-color);
+    background:white;
     padding: 15px 100px;
-
+    box-shadow: 0.5px 0.5px 21px rgb(0, 0, 0,0.3);
 }
+
+
+
+
 section {
     padding: 150px 100px 0 100px;
 }
-.logo{
+
+.logo {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
-h2{
-    margin: 16px;
+
+.logo img {
+    height: 70px;
+    width: 70px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     background: none;
+
 }
-.navbar li{
+
+.navbar li {
     position: relative;
 }
+
 .navbar a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1rem 0.5rem;
-    color: #fff;
+    color: black;
     font-weight: 400;
 }
+
 .navbar a::after {
     content: "";
     width: 0%;
@@ -60,14 +76,17 @@ h2{
     left: 0;
     transition: 0.5s
 }
+
 .navbar a:hover::after {
     width: 100%;
 }
 
-header h2{
-    color: #fff;
+header h2 {
+    color:black;
     font-weight: 600;
+    padding-top: 1rem;
 }
+
 /* Watermark CSS */
 .watermark {
     position: fixed;

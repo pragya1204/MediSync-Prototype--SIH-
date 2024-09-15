@@ -13,7 +13,7 @@
 }
 
 :root {
-    --main-color: #042494;
+    --main-color: linear-gradient(90deg, rgba(4, 56, 140, 0.95) 0%, rgba(4, 36, 148, 0.9) 100%);
     --second-color: #CBE6FF;
     --third-color: #FFC002;
 }
@@ -27,10 +27,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--main-color);
+    background:white;
     padding: 15px 100px;
-
+    box-shadow: 0.5px 0.5px 21px rgb(0, 0, 0,0.3);
 }
+
+
+
 
 section {
     padding: 150px 100px 0 100px;
@@ -57,9 +60,9 @@ section {
 }
 
 .navbar a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1rem 0.5rem;
-    color: #fff;
+    color: black;
     font-weight: 400;
 }
 
@@ -79,14 +82,14 @@ section {
 }
 
 header h2 {
-    color: #fff;
+    color:black;
     font-weight: 600;
     padding-top: 1rem;
 }
 
 .navbar-sign-in a {
-    padding: 10px 20px;
-    color: #fff;
+    padding: 15px 25px;
+    color:black;
     font-weight: 500;
 
 }
@@ -95,7 +98,7 @@ header h2 {
 
 .navbar-sign-in .sign-in {
     background: var(--third-color);
-    color: #fff;
+    color: black;
     border-radius: 0.5rem;
 }
 
@@ -122,15 +125,28 @@ header h2 {
     width: 600px;  /* Increase the size of the watermark */
     height: auto;
 }
-.overview {
-    text-align: center;
-    padding: 0 0 2rem 0;
 
+/* styles.css */
+
+
+.overview {
+    background: linear-gradient(to right, rgba(5, 192, 167, 0.8), rgba(4, 82, 155, 0.8)), url('background-image.jpg') no-repeat center center/cover;
+
+    height: 13rem ;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    position: relative;
 }
 
 .overview p {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin: 0;
     font-weight: 600;
-    font-size: 1.75rem;
+    line-height: 1.4; /* Adjust line height for better readability */
+    max-width: 800px; /* Optional: set a max width for the text */
+    margin: 0 auto; /* Center the text block */
 }
 
 .home-card {
@@ -145,56 +161,75 @@ header h2 {
     text-align: center;
 }
 
-.home-card div i {
-    font-size: 3rem;
-    padding: 3rem 8.75rem;
+.home-card img {
+    margin-bottom: 1rem;
+    margin-left: 1rem; /* Reset margins */
+    width: 1rem; /* Set a fixed width for the image if necessary */
+    height: 1rem; /* Set a fixed height for the image if necessary */
+    animation: animateImage 3s infinite; /* Apply the infinite animation */
 }
-
-.home-card div img:hover {
-    font-size: 3.5rem;
+/* Keyframes for more visible animation */
+@keyframes animateImage {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9); /* Slightly scale up */
+        opacity: 0.8; /* Slightly reduce opacity */
+    }
+    75%{
+        transform: scale(0.85);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
 }
-
-
 .home-card .card-r {
     width: 20rem;
     height: 20rem;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     border-radius: 17%;
     background: var(--second-color);
     text-align: center;
     border: 0.5px solid black;
     box-shadow: 0.5px 0.5px 21px black;
-
-}
-
-.home-card .card-em {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 17%;
-    background: var(--second-color);
-    text-align: center;
-    border: 0.5px solid black;
-    box-shadow: 0.5px 0.5px 21px black;
-
-
+    transition: width 0.3s, height 0.3s; /* Smooth transition for hover effect */
 }
 
 .home-card .card-r:hover {
     width: 21rem;
     height: 21rem;
+}
+
+
+.home-card .card-em {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     border-radius: 17%;
     background: var(--second-color);
-    box-shadow: 2px 2px 41px #042494;
-    text-decoration: underline;
+    text-align: center;
+    border: 0.5px solid black;
+    box-shadow: 0.5px 0.5px 21px black;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for hover effect */
 
 }
+
+
 
 .home-card .card-em:hover {
     width: 21rem;
     height: 21rem;
-    border-radius: 17%;
-    background: var(--second-color);
     box-shadow: 2px 2px 41px #9d0707;
-    text-decoration: underline;
 
 }
 
@@ -206,6 +241,9 @@ header h2 {
     margin-bottom: 1rem;
 
 }
+.home-card .card-r a:hover{
+    text-decoration: underline;
+}
 
 .home-card .card-em a {
     text-align: center;
@@ -213,6 +251,9 @@ header h2 {
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+.home-card .card-em a:hover{
+    text-decoration: underline;
 }
 
 .features {

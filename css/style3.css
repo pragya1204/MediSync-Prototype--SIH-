@@ -9,11 +9,11 @@
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    
+
 }
 
 :root {
-    --main-color: #042494;
+    --main-color: linear-gradient(90deg, rgba(4, 56, 140, 0.95) 0%, rgba(4, 36, 148, 0.9) 100%);
     --second-color: #CBE6FF;
     --third-color: #FFC002;
 }
@@ -27,10 +27,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--main-color);
+    background:white;
     padding: 15px 100px;
-
+    box-shadow: 0.5px 0.5px 21px rgb(0, 0, 0,0.3);
 }
+
+
+
 
 section {
     padding: 150px 100px 0 100px;
@@ -57,9 +60,9 @@ section {
 }
 
 .navbar a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1rem 0.5rem;
-    color: #fff;
+    color: black;
     font-weight: 400;
 }
 
@@ -79,17 +82,18 @@ section {
 }
 
 header h2 {
-    color: #fff;
+    color:black;
     font-weight: 600;
     padding-top: 1rem;
 }
 
 .navbar-sign-in a {
-    padding: 10px 20px;
-    color: #fff;
+    padding: 15px 25px;
+    color:black;
     font-weight: 500;
 
 }
+
 
 
 
