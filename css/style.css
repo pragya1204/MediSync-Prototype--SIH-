@@ -127,33 +127,33 @@ header h2 {
 }
 
 /* styles.css */
-
+.home{
+    padding: 0;
+}
+.banner{
+    padding-top:6rem;
+}
+.banner img{
+    height: 14rem;
+    width: 100%;
+}
 
 .overview {
-    background: linear-gradient(to right, rgba(5, 192, 167, 0.8), rgba(4, 82, 155, 0.8)), url('background-image.jpg') no-repeat center center/cover;
-
-    height: 13rem ;
-    background-position: center;
-    color: white;
+    padding: 2rem 6rem ;
     text-align: center;
-    padding: 3rem;
-    position: relative;
+
 }
 
 .overview p {
-    font-size: 1.5em; /* Adjust font size as needed */
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.4; /* Adjust line height for better readability */
-    max-width: 800px; /* Optional: set a max width for the text */
-    margin: 0 auto; /* Center the text block */
+   font-size: 1.25rem;
+   font-weight: 600;
 }
 
 .home-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 5rem;
+    padding: 0 5rem;
 }
 }
 
@@ -188,8 +188,8 @@ header h2 {
     }
 }
 .home-card .card-r {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center; /* Center items horizontally */
@@ -203,14 +203,14 @@ header h2 {
 }
 
 .home-card .card-r:hover {
-    width: 21rem;
-    height: 21rem;
+    width: 19rem;
+    height: 19rem;
 }
 
 
 .home-card .card-em {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center; /* Center items horizontally */
@@ -227,8 +227,8 @@ header h2 {
 
 
 .home-card .card-em:hover {
-    width: 21rem;
-    height: 21rem;
+    width: 19rem;
+    height: 19rem;
     box-shadow: 2px 2px 41px #9d0707;
 
 }

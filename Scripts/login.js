@@ -4,42 +4,26 @@ function changeLoginForm() {
     if (selectedOption === "user") {
         formContainer.innerHTML = `
             <form>
-
-                <div class="input-group">
-                    <label for="mobile-number">Mobile Number</label>
-                    <input id="mobile-number" placeholder="Enter Mobile Number" type="text" />
-                </div>
-                <div class="input-group">
-                    <label for="uid">UID</label>
-                    <input id="uid" placeholder="Enter UID" type="text" />
-                </div>
-                <div class="input-group-btn">
-                    <a href="opd1.html">ENTER</a>
-
-                </div>
-                <div class="input-group-btn">
-                    <a href="#">Get OTP</a>
-
-                </div>
-            </form>
+                    <div class="input-group">
+                        <input id="mobile-number" placeholder="Mobile Number" type="text" />
+                    </div>
+                    <div class="input-group">
+                        <input id="uid" placeholder="UID" type="text" />
+                    </div>
+                    <button type="submit"><a href="opd1.html">Log In</a></button>
+                </form>
         `;
-    } else if (selectedOption === "admin") {
+    } else if (selectedOption === "hospital") {
         formContainer.innerHTML = `
             <form>
-
-                <div class="input-group">
-                    <label for="hospital-id">Hospital ID</label>
-                    <input id="hospital-id" placeholder="Enter Hospital ID" type="text" />
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input id="password" placeholder="Enter Password" type="text" />
-                </div>
-                <div class="input-group-btn">
-                    <a href="hospital interface.html">ENTER</a>
-
-                </div>
-            </form>
+                    <div class="input-group">
+                        <input id="hospital-id" placeholder="Hospital ID" type="text" />
+                    </div>
+                    <div class="input-group">
+                        <input id="password" placeholder="Password" type="text" />
+                    </div>
+                    <button type="submit"><a href="hospital Interface.html">Log In</a></button>
+                </form>
         `;
     }
 }

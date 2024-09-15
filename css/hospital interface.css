@@ -87,35 +87,6 @@ header h2 {
     padding-top: 1rem;
 }
 
-
-
-
-
-.navbar-profile .profile {
-    background-color: #d3d3d3;
-    color: black;
-    border: 0.5px solid black;
-    box-shadow: 1px 1px 21px black;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 0.5rem;
-}
-.navbar-profile .profile:hover{
-    font-size: 16px;
-}
-
-
-.header .profile {
-    background-color: #d3d3d3;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
 /* Watermark CSS */
 .watermark {
     position: fixed;
@@ -140,19 +111,63 @@ header h2 {
 }
 .main a {
     background-color: #ccf2ff;
-    color: #0033a0;
-    padding: 3rem;
+    color: black;
     margin: 3rem auto;
     border: none;
     border-radius: 10px;
-    width: 500px;
-    font-size: 22px;
+    width: 250px;
+    height: 290px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: block;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: background-color 0.8s, transform 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
 }
 .main a:hover {
     background-color: #b3e6ff;
     transform: translateY(-5px);
+}
+.banner{
+    width: 100vw;
+    height: 180px;
+    position: relative;
+    top: -78px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    margin: auto;
+    position: relative;
+    top: -70px;
+}
+.cards img{
+    border-radius: 15px;
+    height: 150px;
+    margin-top: 35px;
+}
+.banner img{
+    height: 118%;
+    width: 100%;
+}
+.bannertxt{
+    position: relative;
+    height: 62px;
+    width: 585px;
+    top: -154px;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    left: 54%;
+}
+.smallbannertxt{
+    font-size: 25px;
+    font-weight: 500;
 }

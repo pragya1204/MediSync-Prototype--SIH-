@@ -6,56 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediSync</title>
     <link rel="icon" href="images/MediSync_processed.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
 </head>
-<link rel="stylesheet" href="css/login.css">
 
 <body>
-    <!-- <div class="watermark">
-        <img src="images/MediSync Logo.png" alt="Watermark Logo">
-    </div> -->
     <header>
         <div class="logo">
-            <img src="images/MediSync Logo.png" alt="" width="70px" height="70px">
+            <img src="images/MediSync Logo.png" alt="MediSync Logo" width="70px" height="70px">
             <h2>MediSync</h2>
-        </div>
-
-        <ul class="navbar">
-            <li><a href="landingpage.html#home">Home</a></li>
-            <li><a href="landingpage.html#faqs">FAQ</a></li>
-            <li><a href="landingpage.html#feedback">Feedback</a></li>
-            <li><a href="landingpage.html#contact">Contact</a></li>
-        </ul>
         </div>
     </header>
     <div class="login-container">
-        <h2>LOGIN AS : <select id="loginSelect" onchange="changeLoginForm()">
-                <option value="user">User Login</option>
-                <option value="admin">Hospital Login</option>
-            </select>
-        </h2>
-        <div id="loginForm">
-            <form>
-
-                <div class="input-group">
-                    <label for="mobile-number">Mobile Number</label>
-                    <input id="mobile-number" placeholder="Enter Mobile Number" type="text" />
-                </div>
-                <div class="input-group">
-                    <label for="uid">UID</label>
-                    <input id="uid" placeholder="Enter UID" type="text" />
-                </div>
-                <div class="input-group-btn">
-                    <a href="opd1.html">ENTER</a>
-
-                </div>
-                <div class="input-group-btn">
-                    <a href="#">Get OTP</a>
-
-                </div>
-            </form>
+        <div class="login-form">
+            <div class="medisync">MediSync</div>
+            <div class="loginoptn">
+                <h2>LOGIN AS : <select id="loginSelect" onchange="changeLoginForm()">
+                        <option value="user">User Login</option>
+                        <option value="hospital">Hospital Login</option>
+                    </select>
+                </h2>
+            </div>
+            <div id="loginForm">
+                <form>
+                    <div class="input-group">
+                        <input id="mobile-number" placeholder="Mobile Number" type="text" />
+                    </div>
+                    <div class="input-group">
+                        <input id="uid" placeholder="UID" type="text" />
+                    </div>
+                    <button type="submit"><a href="opd1.html">Log In</a></button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="Scripts/login.js"></script>
-    <script src="Scripts/main.js"></script>
-
 </body>
+
+</html>
