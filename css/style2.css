@@ -124,25 +124,90 @@ header h2 {
     width: 600px;  /* Increase the size of the watermark */
     height: auto;
 }
-.main {
+
+.banner{
+    padding-top: 6rem;
+}
+.banner img{
+    height: 16rem;
+    width: 100%;
+}
+.overview{
     text-align: center;
-    padding: 8rem 3rem ;
+    display: flex;
+    padding: 1rem 4rem 1rem 15rem;
 }
-.main a {
-    background-color: #ccf2ff;
-    color: #0033a0;
-    padding: 40px;
-    margin: 20px auto;
-    border: none;
-    border-radius: 10px;
-    width: 500px;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: block;
-    transition: background-color 0.8s, transform 0.8s;
+.overview p{
+    font-size: 1.25rem;
+    font-weight: 600;
 }
-.main a:hover {
-    background-color: #b3e6ff;
-    transform: translateY(-5px);
+.main{
+    padding-top: 1rem;
+}
+
+.opd-card {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+}
+}
+
+.opd-card div {
+    text-align: center;
+}
+
+.opd-card .card img {
+    margin-bottom: 1rem;
+    margin-left: 1rem; /* Reset margins */
+    width: 1rem; /* Set a fixed width for the image if necessary */
+    height: 1rem; /* Set a fixed height for the image if necessary */
+    animation: animateImage 3s infinite; /* Apply the infinite animation */
+}
+/* Keyframes for more visible animation */
+@keyframes animateImage {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9); /* Slightly scale up */
+        opacity: 0.8; /* Slightly reduce opacity */
+    }
+    75%{
+        transform: scale(0.85);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}
+.opd-card .card {
+    width: 20rem;
+    height:15rem;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    border-radius: 17%;
+    background: var(--second-color);
+    text-align: center;
+    border: 0.5px solid black;
+    box-shadow: 0.5px 0.5px 21px black;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for hover effect */
+}
+
+.opd-card .card:hover {
+    width: 21rem;
+    height: 18rem;
+}
+.opd-card .card a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.25rem;
+
 }

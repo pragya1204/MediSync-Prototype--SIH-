@@ -116,7 +116,7 @@ header h2 {
     top: 58%;  /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Ensure the watermark is perfectly centered */
-    opacity: 0.2; /* Transparency for the watermark */
+    opacity: 0.1; /* Transparency for the watermark */
     z-index: -1; /* Ensures it's above other content */
     pointer-events: none; /* Prevent interaction with the watermark */
 }
